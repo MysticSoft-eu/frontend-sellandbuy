@@ -1,0 +1,110 @@
+.chatPage {
+    display: flex;
+     
+    border: 2px solid #ccc;
+    width: 1000px;
+    height: 500px;
+   
+    
+    margin: 10px  auto;
+}
+
+.chatList {
+    width: 30%;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+}
+
+.chatListItem {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-decoration: none;
+    color: black;
+}
+
+.chatListItem:hover {
+    background: #eee;
+}
+
+.chatWindow {
+    width: 70%;
+    padding: 10px;
+    border-left: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chatMessages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-bottom: 10px; /* Added to separate the last message from the input container */
+}
+
+.chatMessage {
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    width: fit-content; /* Added to adjust the width according to the message length */
+}
+
+.chatMessage.sent {
+    background: #e0f7fa;
+    align-self: flex-end;
+}
+
+.chatMessage.received {
+    background: #fff9c4;
+    align-self: flex-start;
+}
+
+.chatInputContainer {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.messageSender {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.chatInputContainer input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.chatInputContainer button {
+    padding: 10px 20px;
+    background: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chatInputContainer button:hover {
+    background: #004d40;
+}
+
+@media (max-width: 800px) {
+    .chatPage {
+        width: 100%;
+    }
+
+    .chatList {
+        width: 30%;
+    }
+
+    .chatWindow {
+        width: 100%;
+    }
+}
