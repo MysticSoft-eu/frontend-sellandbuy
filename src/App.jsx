@@ -17,7 +17,7 @@ import CategoryManager from "./page/CategoryManager";
 import ItemsByCategory from "./page/ItemsByCategory";
 import Chat from "./page/Chat";
 axios.defaults.baseURL = 'https://backendsellandbuy-516d9183eb68.herokuapp.com';
-axios.defaults.withCredentials = true;
+// axios.defaults.withCredentials = true;
 
 
 function App() {
