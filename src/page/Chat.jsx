@@ -86,21 +86,38 @@ export default function Chat() {
     function connectTows() {
         if (reconnectAttempts > 5) return;
         const wsConnection = new WebSocket("wss://backendsellandbuy-516d9183eb68.herokuapp.com");
+        
         wsConnection.onopen = () => {
             console.log('WebSocket connection opened');
             wsConnection.send(JSON.stringify({ chatId: selectChat }));
             reconnectAttempts = 0;
         };
-        setWs(wsConnection);
-        wsConnection.addEventListener('message', handleMessage);
-        wsConnection.addEventListener('close', () => {
-            console.log('WebSocket closed. Attempting to reconnect...');
+        
+        wsConnection.onclose = (event) => {
+            console.log('WebSocket closed. Reason: ', event.reason);
             reconnectAttempts++;
             setTimeout(() => {
                 connectTows();
             }, 1000);
-        });
+        };
+    
+        wsConnection.onerror = (error) => {
+            console.error('WebSocket error: ', error);
+        };
+        
+        setWs(wsConnection);
+        wsConnection.addEventListener('message', handleMessage);
+        
+        wsConnection.onclose = (event) => {
+            console.log('WebSocket closed. Reason: ', event.reason);
+            reconnectAttempts++;
+            wsConnection.removeEventListener('message', handleMessage);
+            setTimeout(() => {
+                connectTows();
+            }, 1000);
+        };
     }
+    
     
 
     function handleMessage(ev) {

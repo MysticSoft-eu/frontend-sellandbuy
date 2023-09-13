@@ -5,6 +5,7 @@ import styles from './styles/PhotoUploader.module.css';
 export default function PhotosUploader({ onChange, initialPhotos = [] }) {
     const [addedPhotos, setAddedPhotos] = useState([]);
     const [dragging, setDragging] = useState(false);
+    const backendUrl = 'https://backendsellandbuy-516d9183eb68.herokuapp.com';
 
     useEffect(() => {
         setAddedPhotos(initialPhotos);
@@ -12,12 +13,12 @@ export default function PhotosUploader({ onChange, initialPhotos = [] }) {
 
     const uploadPhoto = (ev) => {
         const files = ev.target.files;
-        const data = new FormData();  
+        const data = new FormData();
         for (let i = 0; i < files.length; i++) {
             data.append('photos', files[i]);
         }
 
-        axios.post('/upload', data, {
+        axios.post(`${backendUrl}/upload`, data, {
             headers: {'Content-Type': 'multipart/form-data'}
         }).then((response) => {
             const { data: filenames } = response;
@@ -34,23 +35,23 @@ export default function PhotosUploader({ onChange, initialPhotos = [] }) {
     const handleDragIn = (e) => {
         e.preventDefault();
         e.stopPropagation();
-      };
-      
-      const handleDragOut = (e) => {
+    };
+
+    const handleDragOut = (e) => {
         e.preventDefault();
         e.stopPropagation();
         setDragging(false);
-      };
-      
-      const handleDragOver = (e) => {
+    };
+
+    const handleDragOver = (e) => {
         e.preventDefault();
         e.stopPropagation();
         if (e.dataTransfer.items && e.dataTransfer.items.length > 0) {
           setDragging(true);
         }
-      };
-      
-      const handleDrop = (e) => {
+    };
+
+    const handleDrop = (e) => {
         e.preventDefault();
         e.stopPropagation();
         setDragging(false);
@@ -58,37 +59,33 @@ export default function PhotosUploader({ onChange, initialPhotos = [] }) {
           uploadPhoto({ target: { files: e.dataTransfer.files } });
           e.dataTransfer.clearData();
         }
-      };
+    };
+
     return (
         <div className={styles.container}>
-             <h2 className={styles.heading}>Added Photos</h2>
-             
-           
-             put photo here
-             <div 
-             className={`${styles.place} ${dragging ? styles.dragging : ''}`}
-             onDrop={handleDrop}
-              onDragOver={handleDragOver}
-              onDragEnter={handleDragIn}
-              onDragLeave={handleDragOut}>  
-                 
-            
-       
-          
-             
-              {addedPhotos.length > 0 && addedPhotos.map((photo, index) => (
-                  <div key={index} className={styles.imageContainer}>
-                      <img 
-                          src={`http://localhost:3000/uploads/${photo}`} 
-                          alt="Uploaded" 
-                      />
-                      <button onClick={() => deletePhoto(photo)} className={styles.deleteButton}>x</button>
-                  </div>
-              ))}
-          </div> <label htmlFor="photo" className={styles.label}>
+            <h2 className={styles.heading}>Added Photos</h2>
+
+            put photo here
+            <div
+            className={`${styles.place} ${dragging ? styles.dragging : ''}`}
+            onDrop={handleDrop}
+            onDragOver={handleDragOver}
+            onDragEnter={handleDragIn}
+            onDragLeave={handleDragOut}>
+
+            {addedPhotos.length > 0 && addedPhotos.map((photo, index) => (
+                <div key={index} className={styles.imageContainer}>
+                    <img
+                        src={`${backendUrl}/uploads/${photo}`}
+                        alt="Uploaded"
+                    />
+                    <button onClick={() => deletePhoto(photo)} className={styles.deleteButton}>x</button>
+                </div>
+            ))}
+            </div> <label htmlFor="photo" className={styles.label}>
                 Choose Photos
-              <input type="file" id="photo" multiple name="photo" onChange={uploadPhoto} className={styles.fileInput} />
+                <input type="file" id="photo" multiple name="photo" onChange={uploadPhoto} className={styles.fileInput} />
             </label>
         </div>
-      );
+    );
 }

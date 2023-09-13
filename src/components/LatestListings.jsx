@@ -20,7 +20,7 @@ const Listing = () => {
         <Link to={'/itempage/'+listing._id} >
           <div className={styles.listingItem} key={listing.id}>
             <div className={styles.listingImageWrapper}>
-              <img src={`http://localhost:3000/uploads/${listing.photos[0]}`} alt="" className={styles.listingImage} />
+              <img src={`https://backendsellandbuy-516d9183eb68.herokuapp.com/uploads/${listing.photos[0]}`} alt="" className={styles.listingImage} />
             </div>
             <div className={styles.listingDetails}>
               <div className={styles.listingText}>
