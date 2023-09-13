@@ -16,7 +16,7 @@ import ItemPage from "./page/ItemPage";
 import CategoryManager from "./page/CategoryManager";
 import ItemsByCategory from "./page/ItemsByCategory";
 import Chat from "./page/Chat";
-axios.defaults.baseURL = 'http://127.0.0.1:3000';
+axios.defaults.baseURL = 'https://backendsellandbuy-516d9183eb68.herokuapp.com';
 axios.defaults.withCredentials = true;
 
 

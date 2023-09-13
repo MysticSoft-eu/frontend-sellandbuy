@@ -43,7 +43,8 @@ export default function ChatPage() {
     }, [onlinePeople]);
 
     function connectTows() {
-        const ws = new WebSocket("ws://127.0.0.1:3000");
+        const ws = new WebSocket("wss://backendsellandbuy-516d9183eb68.herokuapp.com");
+
         setWs(ws);
         ws.addEventListener('message', handleMessage);
         ws.addEventListener('close', () => {

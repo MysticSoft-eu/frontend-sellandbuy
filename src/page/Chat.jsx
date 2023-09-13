@@ -85,7 +85,7 @@ export default function Chat() {
 
     function connectTows() {
         if (reconnectAttempts > 5) return;
-        const wsConnection = new WebSocket("ws://127.0.0.1:3000");
+        const wsConnection = new WebSocket("wss://backendsellandbuy-516d9183eb68.herokuapp.com");
         wsConnection.onopen = () => {
             console.log('WebSocket connection opened');
             wsConnection.send(JSON.stringify({ chatId: selectChat }));

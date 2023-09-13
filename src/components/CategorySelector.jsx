@@ -12,7 +12,7 @@ function RecursiveCategorySelector({ onCategoryChange, initialCategories = [] })
 
   const fetchCategories = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/categories');
+      const response = await axios.get('https://backendsellandbuy-516d9183eb68.herokuapp.com/categories');
       setCategories(response.data);
     } catch (error) {
       console.error('Failed to fetch categories:', error);
