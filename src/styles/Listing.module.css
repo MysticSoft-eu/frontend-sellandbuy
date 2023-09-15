@@ -38,7 +38,7 @@
 .listingBottom {
   display: flex;
   flex-direction: row;
-  height: 100px;
+  height: 150px;
   
 }
 
@@ -74,7 +74,7 @@
 
 .listingName {
   width: auto;
-  height: 60px;
+  height: 110px;
   padding: 5px;
   justify-content: left;
   line-height: 1.1;
