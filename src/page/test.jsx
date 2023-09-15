@@ -3,7 +3,7 @@ import axios from "axios";
 import styles from '../styles/PhotoUploader.module.css';
 
 
-function Test({ onChange })  {
+function Test({ onChange, initialPhotos = [] })  {
   const [file, setFile] = useState(null);
 //   const [loading, setLoading] = useState(false);
   const [res, setRes] = useState({});
@@ -11,6 +11,9 @@ function Test({ onChange })  {
   const handleSelectFile = (e) => {
   setFile(e.target.files[0]);
 }
+useEffect(() => {
+    setAddedPhotos(initialPhotos);
+}, [initialPhotos]);
 
 
   const [addedPhotos, setAddedPhotos] = useState([]);

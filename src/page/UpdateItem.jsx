@@ -125,7 +125,7 @@ export default function UpdateItem() {
             </label>
             <label>
              Photos:
-             <Test onChange={handlePhotosChange}  />
+             <Test onChange={handlePhotosChange} initialPhotos={item.photos} />
             </label>
             <label>
               Price:
