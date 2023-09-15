@@ -12,19 +12,22 @@ function Test({ onChange, initialPhotos = [] })  {
   setFile(e.target.files[0]);
 }
 useEffect(() => {
-    setAddedPhotos(initialPhotos);
-}, [initialPhotos]);
-
+    if (initialPhotos && initialPhotos.length > 0) {
+        setAddedPhotos(initialPhotos);
+    }
+  }, [initialPhotos]);
+  
 
   const [addedPhotos, setAddedPhotos] = useState([]);
   const [dragging, setDragging] = useState(false);
 
+
   useEffect(() => {
-    console.log(addedPhotos);
-  }, [addedPhotos]);
-  useEffect(() => {
-    handleUpload();
-   }, [file]);
+    if (file) {
+      handleUpload();
+    }
+  }, [file]);
+  
 
   const handleUpload = async () => {
     try {
@@ -81,10 +84,9 @@ useEffect(() => {
   return (
     <div className="App">
          <div className={styles.container}>
-      <label htmlFor="file" className="btn-grey">
-        {" "}
+      
         select file
-      </label>
+     
       {file && <center> {file.name}</center>}
       <input
         id="file"
