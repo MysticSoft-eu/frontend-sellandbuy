@@ -37,7 +37,7 @@ export default function ItemPage() {
                 
                 <div className="photoContainer">
                     <img 
-                        src={`https://backendsellandbuy-516d9183eb68.herokuapp.com/${item.photos[currentPhotoIndex]}`} 
+                         src={`${item.photos[ currentPhotoIndex]}`} 
                         alt={`${item.title}-${currentPhotoIndex}`} 
                         className="photo"
                     />

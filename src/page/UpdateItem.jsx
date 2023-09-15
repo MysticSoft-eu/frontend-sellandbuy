@@ -4,7 +4,7 @@ import axios from 'axios';
 import '../styles/CategoryManager.css';
 import { useContext } from "react";
 import { UserContext } from "../UserContext";
-import PhotosUploader from '../PhotosUploader';
+import Test from './test.jsx';
 
 export default function UpdateItem() {
   const {user} = useContext(UserContext);
@@ -125,7 +125,7 @@ export default function UpdateItem() {
             </label>
             <label>
              Photos:
-             <PhotosUploader onChange={handlePhotosChange} initialPhotos={item.photos} />
+             <Test onChange={handlePhotosChange}  />
             </label>
             <label>
               Price:

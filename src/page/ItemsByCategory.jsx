@@ -165,7 +165,7 @@ const fetchItems = async () => {
             <Link to={`/itempage/${listing._id}`} key={listing._id}>
               <div className="listing-item">
                 <div className="listing-image-wrapper">
-                  <img src={`https://backendsellandbuy-516d9183eb68.herokuapp.com/uploads/${listing.photos[0]}`} alt="" className="listing-image" />
+                  <img src={`${listing.photos[0]}`} alt="" className="listing-image" />
                 </div>
                 <div className="listing-details">
                   <div className="listing-text">

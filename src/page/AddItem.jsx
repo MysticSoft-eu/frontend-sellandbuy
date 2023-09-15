@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import RecursiveCategorySelector from '../components/CategorySelector.jsx';
 import PhotosUploader from '../PhotosUploader';
-import "./style/AddItem.css"
+import "./style/Additem.css"
 import { useContext } from "react";
 import { UserContext } from "../UserContext";
+import Test from './test.jsx';
+
 export default function AddItem() {
     
 
@@ -81,7 +83,7 @@ export default function AddItem() {
                 </label>
                 <div>
                     Photos:
-                    <PhotosUploader onChange={handlePhotosChange} initialPhotos={item.photos} />
+                    <Test onChange={handlePhotosChange} />
                 </div>
                 <label>
                     Category:
