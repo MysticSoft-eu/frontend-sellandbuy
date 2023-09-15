@@ -1,19 +1,33 @@
 /* style z pierwszego pliku */
+/* style globalne */
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-weight-normal: 400;
+  --font-weight-bold: 500;
+  --color-light: #f8f9fa;
+  --color-dark: #242424;
+  --color-primary: #646cff;
+  --color-primary-hover: #535bf2;
+  --color-secondary: #1a1a1a;
+
+  font-family: var(--font-family);
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--color-dark);
+  background-color: var(--color-light);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -25,18 +39,17 @@ body {
   min-width: 320px;
  
   padding: 0;
-  font-family: Arial, sans-serif;
   line-height: 1.6;
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
   text-decoration: inherit;
 }
 
 a:hover {
-  color: #535bf2;
+  color: var(--color-primary-hover);
 }
 
 h1 {
@@ -49,15 +62,14 @@ button {
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  font-weight: var(--font-weight-bold);
+  background-color: var(--color-secondary);
   cursor: pointer;
   transition: border-color 0.25s;
 }
 
 button:hover {
-  border-color: #646cff;
+  border-color: var(--color-primary);
 }
 
 button:focus,
@@ -68,7 +80,7 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: var(--color-light);
   }
   a:hover {
     color: #747bff;
@@ -78,11 +90,20 @@ button:focus-visible {
   }
 }
 
-/* style z drugiego pliku */
-
-* {
-  box-sizing: border-box;
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: var(--color-dark);
+    background-color: var(--color-light);
+  }
+  a:hover {
+    color: var(--color-primary-hover);
+  }
+  button {
+    background-color: var(--color-secondary);
+  }
 }
+
+/* style specyficzne dla strony */
 
 #root {
   display: flex;
@@ -101,5 +122,5 @@ button:focus-visible {
   flex: 1;
   padding: 20px;
   width: 100%;
-  min-height: 100vh; /* Add this */
+  min-height: 100vh;
 }

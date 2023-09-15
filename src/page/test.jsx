@@ -84,10 +84,7 @@ useEffect(() => {
   return (
     <div className="App">
          <div className={styles.container}>
-      
         select file
-     
-      {file && <center> {file.name}</center>}
       <input
         id="file"
         type="file"

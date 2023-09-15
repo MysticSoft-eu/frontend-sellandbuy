@@ -1,6 +1,5 @@
 .category {
-  width: 80%;
-  min-width: 400px;
+  
   margin: 0 auto;
   height: max(30%, 200px);
   display: flex;

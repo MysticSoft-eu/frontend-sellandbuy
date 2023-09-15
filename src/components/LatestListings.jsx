@@ -10,6 +10,7 @@ const Listing = () => {
     axios.get('/items')
       .then(response => setListings(response.data))
       .catch(error => console.error(error));
+      console.log(listings);
   }, []);
 
   return (
@@ -18,25 +19,31 @@ const Listing = () => {
       <div className={styles.listingItems}>
         {listings.map((listing) => (
         <Link to={'/itempage/'+listing._id} >
-          <div className={styles.listingItem} key={listing.id}>
-            <div className={styles.listingImageWrapper}>
-              <img src={`${listing.photos[0]}`} alt="" className={styles.listingImage} />
-            </div>
-            <div className={styles.listingDetails}>
-              <div className={styles.listingText}>
-                <h3 className={styles.listingName}>{listing.title}</h3>
-                <p className={styles.listingDescription}>
-                  {listing.description}
-                </p>
-              </div>
-              <div className={styles.listingRight}>
-                <p className={styles.listingPrice}>{listing.price}</p>
+        <div className={styles.listingItem} key={listing.id}>
+    
+    <div className={styles.listingBottom}>
+        <div className={styles.listingImageWrapper}>
+            <img src={listing.photos[0]} alt="" className={styles.listingImage} />
+        </div>
+        <div className={styles.listingDetails}>
+            
+                
+                <p className={styles.listingName}>{listing.title}</p>
+                <p className={styles.listingPrice}>{listing.price} zl</p>
+                
                 <p className={styles.listingCity}>{listing.address}</p>
-              </div>
+            
             </div>
-          </div>
+        </div>
+   
+</div>
+
+
+
+          
         </Link> 
         ))}
+
       </div>
     </div>
   );
