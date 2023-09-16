@@ -28,11 +28,13 @@ const Listing = () => {
         <div className={styles.listingDetails}>
             
                 
-                <p className={styles.listingName}>{listing.title}</p>
-                <p className={styles.listingPrice}>{listing.price} zl</p>
+        <span className={styles.listingName}>{listing.title}</span>
                 
+                <div className={styles.listing} >
+                  
+                <p className={styles.listingPrice}>{listing.price} zl</p>
                 <p className={styles.listingCity}>{listing.address}</p>
-            
+            </div>
             </div>
         </div>
    
