@@ -1,0 +1,40 @@
+/* Footer.css */
+.body {
+    width: 80%;
+    
+    background-color: #ffffff;
+    color: #ecf0f1;
+    padding: 20px;
+    width: 100%;
+    bottom: 0;
+    position: bottom;
+   
+}
+.footer{
+    
+    border-top: #c4c4c4 solid 2px;
+}
+
+.footer-nav {
+   
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-link  {
+    
+   color: #c4c4c4;
+    margin: 0 10px;
+   
+}
+
+
+.footer p { 
+    
+    padding: 20px;
+    color: #c4c4c4;
+    margin: 0;
+    text-align: center;
+}
