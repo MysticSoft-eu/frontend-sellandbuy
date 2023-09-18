@@ -21,7 +21,7 @@
     
     background-color: #f8f9fa;
     border: 1px solid black;
-    border-radius: 15px;
+   
 }
 /* Styles for the dropdown list when it's open */
 .dropdown-list {
@@ -36,7 +36,7 @@
     z-index: 1;
     display: none;
     border: 1px solid black;
-    border-radius: 15px;
+   
    /* Initially hide the dropdown */
 }
 
@@ -66,7 +66,7 @@
     padding-right: 10px;
     width: auto;
     cursor: pointer;
-   border-radius: 35px;
+   
     
    border-bottom: 2px solid #ffffff;
 }
@@ -89,7 +89,7 @@
     user-select: none; 
     border: 2px solid #666;
     background-color: #fff;
-    border-radius: 30px; /* Add a slight rounded corner */
+   
     transition: border-color 0.2s, background-color 0.2s;
 }
 
@@ -98,3 +98,26 @@
     margin-top: 10px;
     font-weight: bold;
 }
+@media only screen and (max-width: 600px) {
+    .main{
+        display: flex;
+        justify-content: center; /* wyśrodkowanie w poziomie */
+        align-items: center; 
+       
+        width: 100px;
+        height: 30px;
+    }
+    
+    .dropdown-header {
+        text-align: center;
+        
+        
+        font-size: 10px;
+        width: 80px;
+        height: 15px;
+        
+        background-color: #f8f9fa;
+        border: 1px solid black;
+       
+        
+    }}

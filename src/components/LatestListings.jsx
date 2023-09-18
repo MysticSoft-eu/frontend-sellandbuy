@@ -21,14 +21,14 @@ const Listing = () => {
         <Link to={'/itempage/'+listing._id} >
         <div className={styles.listingItem} key={listing.id}>
     
-    <div className={styles.listingBottom}>
+            <div className={styles.listingBottom}>
         <div className={styles.listingImageWrapper}>
             <img src={listing.photos[0]} alt="" className={styles.listingImage} />
         </div>
         <div className={styles.listingDetails}>
             
                 
-        <span className={styles.listingName}>{listing.title}</span>
+              <span className={styles.listingName}>{listing.title}</span>
                 
                 <div className={styles.listing} >
                   
@@ -52,4 +52,3 @@ const Listing = () => {
 };
 
 export default Listing;
-

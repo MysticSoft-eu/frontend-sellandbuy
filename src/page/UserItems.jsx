@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect , useState } from 'react';
 import { Link } from "react-router-dom"
-import styles from "../styles/ListingShow.module.css";
+import '../styles/ListingShow.css';
 export default function ItemsPage() {
   const [listings, setListings] = useState([]);
   useEffect(() => { 
