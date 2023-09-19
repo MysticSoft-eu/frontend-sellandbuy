@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
-import  "./style/ItemPage.css";
+import  "../styles/ItemPage.css";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 export default function ItemPage() {
@@ -12,8 +12,9 @@ export default function ItemPage() {
     axios.get(`/items/${id}`)
       .then(response => {
         setItem(response.data);
-        setCurrentPhotoIndex(0); // Reset photo index when a new item is loaded
+        setCurrentPhotoIndex(0);   console.log(response.data.photos[1])// Reset photo index when a new item is loaded
       })
+    
       .catch(error => console.error(error));
   }, [id]);
 
@@ -36,14 +37,28 @@ export default function ItemPage() {
                 
                 
                 <div className="photoContainer">
-                    <img 
-                         src={`${item.photos[ currentPhotoIndex]}`} 
-                        alt={`${item.title}-${currentPhotoIndex}`} 
-                        className="photo"
-                    />
-                    <button className="navButton prev" onClick={handlePrevious}>←</button>
-                    <button className="navButton next" onClick={handleNext}>→</button>
-                </div>
+    <div className="mainPhoto">
+        <img 
+            src={`${item.photos[currentPhotoIndex]}`} 
+            alt={`${item.title}-${currentPhotoIndex}`} 
+            className="photo"
+        />
+        <button className="navButton prev" onClick={handlePrevious}>←</button>
+        <button className="navButton next" onClick={handleNext}>→</button>
+    </div>
+    <div className="thumbnailPhotos">
+        {item.photos.map((photo, index) => (
+            <img 
+                key={index}
+                src={photo} 
+                alt={`${item.title}-${index}`} 
+                className={`thumbnailPhoto ${index === currentPhotoIndex ? 'active' : ''}`}
+                onClick={() => setCurrentPhotoIndex(index)}
+            />
+        ))}
+    </div>
+</div>
+
                 <div className="itemInfo">
 
                 <h2 className="itemTitle">{item.title}</h2>
