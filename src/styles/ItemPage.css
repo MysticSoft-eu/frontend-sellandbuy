@@ -1,8 +1,12 @@
 /* Container for the whole page */
+.items{
+    min-height: 600px;
+}
 .itemContainer {
+    
     width: 80%;
     height: 100%;
-    margin: 0 auto;
+    margin: 30px auto ;
     background-color: #f4f4f4;
     border-radius: 8px;
    
@@ -11,60 +15,85 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 .itemInfo{
+    display: flex;
+    justify-content: space-between;
     width: auto;
     height: 100%;
-    margin: 20px ;
+    margin: 5px ;
     background-color: #f4f4f4;
     border-radius: 8px;
+}
+
+.itemBotton{
    
-    
-   
+  
+    margin-bottom: 10px ;
     
 }
+
+
 /* Styling the title */
 .itemTitle {
     font-size: 28px;
-    margin-bottom: 20px;
+    margin: 5px;
     color: #333;
 }
 
 /* Styling the description */
 .itemDescription {
     font-size: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     line-height: 1.5;
     color: #343a40;
 }
+.itemButton{
+    padding: 10px 15px;
+    border: none;
+    background-color: #4f4f50;
+    color: #FFFFFF;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.itemButton:hover{
+    background-color: #b6b6b6;
+}
 .price {
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
     font-size: 16px;
-    margin-bottom: 20px;
-    line-height: 1.5;
+    margin-bottom: 10px;
+    line-height: 1;
     color: #343a40;
 }
 .address {
-    font-size: 16px;
-    margin-bottom: 20px;
+    font-style: italic;
+    align-items: center;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 10px;
     line-height: 1.5;
     color: #343a40;
 }
 /* Category styling */
-.category {
-    font-size: 16px;
-    margin-bottom: 20px;
-    line-height: 1.5;
-    color: #343a40;
-}
+
+
 .photoContainer {
     
     display: flex;
     align-items: center;
     justify-content: center;
+    
 
 }
 
-.mainPhoto {height: 400px;
+.mainPhoto {
+    height: 400px;
     position: relative;
-    padding: 10px;
+    padding: 0px;
+   
 }
 
 .thumbnailPhotos {
@@ -84,7 +113,8 @@
 }
 
 .thumbnailPhoto.active {
-    border: 2px solid #000;
+    border: 2px solid #aaaaaa;
+    background-color: #ffffff;
 }
 
 
@@ -112,4 +142,56 @@
 
 .navButton.next {
     right: 10px; /* Place the next button 10px from the right */
+}
+.itemInfoContainer{
+    align-items: center;
+    text-align: center;
+}
+.category {
+  
+    font-size: 13px;
+   
+    display: inline-table;
+    margin: 0px;
+  }
+  
+  .category-list {
+    margin: 0 0  0 10px;
+    padding: 0;
+
+  }
+  
+  .category-list li {
+ 
+    display: inline;
+    margin-right: 10px;
+  }
+  .category-list li a {
+    font-size: 13px;
+    color: #333;
+    
+  }
+  .category-list li:last-child {
+    margin-right: 0;
+  }
+  
+@media only screen and (max-width: 600px) {
+    .photoContainer {
+    
+        display: inline;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    .thumbnailPhotos {
+        display: flex;
+        flex-direction: row;
+        margin-left: 0px;
+        justify-content: center;
+    }
+    .mainPhoto {height: 250px;
+        position: relative;
+        padding: 0px;
+       
+    }
 }

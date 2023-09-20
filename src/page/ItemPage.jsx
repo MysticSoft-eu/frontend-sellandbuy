@@ -31,6 +31,7 @@ export default function ItemPage() {
   }
 
   return (
+    <div className="items">
     <div className="itemContainer">
         {item && (
             <div>
@@ -58,23 +59,46 @@ export default function ItemPage() {
         ))}
     </div>
 </div>
+<div className="itemInfoContainer">
+{item.category && (
+        <div>
+          
+          <ul className="category-list">
+            <p className="category">Category:</p>
+            {item.category.map((category, index) => (
+              <li key={index}>
+                
+                <Link to={`/category/${category}`}>{category}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}</div>
+   
 
                 <div className="itemInfo">
+                  <div className="itemInfoTop">
 
                 <h2 className="itemTitle">{item.title}</h2>
-                <Link  to={`/chatpage/${item._id}` }>
-
-                <p className="itemDescription">user:{item.login}</p>
-                </Link>
-
+                
                 <p className="itemDescription">Description:{item.description}</p>
-                <p className="address">City:{item.address}</p>
-                {item.price !== 0 && <p className="price">Price: {item.price}</p>}
-                {item.category && <p className="category">Category: {item.category}</p>}
+                </div>
+
+                <div className="itemBotton" >
+                  {item.price !== 0 && <p className="price">Price: {item.price}zl</p>}
+                  <p className="address">City:{item.address}</p>
+                  <Link to={`/chatpage/${item._id}`}>
+               <button className="itemButton">Send message </button>
+                </Link>
+                
+                
+                </div>
+
                 </div>
 
             </div>
         )}
+    </div>
     </div>
 );
 
