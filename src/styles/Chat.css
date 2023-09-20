@@ -1,11 +1,9 @@
 .chatPage {
     display: flex;
-     
+    min-height: 600px;
     border: 2px solid #ccc;
     width: 1000px;
     height: 500px;
-   
-    
     margin: 10px  auto;
 }
 
@@ -94,14 +92,28 @@
 .chatInputContainer button:hover {
     background: #004d40;
 }
+/* Style for the chatList when selectChat is not active (hidden) */
+
 
 @media (max-width: 800px) {
+    .chatList.hidden {
+    display: none;
+  }
+  
+
+  
+  /* Style for the chatWindow when selectChat is not active (hidden) */
+  .chatWindow.hidden {
+    display: none;
+  }
+  
+  
     .chatPage {
         width: 100%;
     }
 
     .chatList {
-        width: 30%;
+        width: 100%;
     }
 
     .chatWindow {

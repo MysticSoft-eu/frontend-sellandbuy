@@ -85,39 +85,22 @@ export default function Chat() {
 
     function connectTows() {
         if (reconnectAttempts > 5) return;
-        const wsConnection = new WebSocket("wss://backendsellandbuy-516d9183eb68.herokuapp.com");
-        
+        const wsConnection = new WebSocket("ws://127.0.0.1:3000");
         wsConnection.onopen = () => {
             console.log('WebSocket connection opened');
             wsConnection.send(JSON.stringify({ chatId: selectChat }));
             reconnectAttempts = 0;
         };
-        
-        wsConnection.onclose = (event) => {
-            console.log('WebSocket closed. Reason: ', event.reason);
-            reconnectAttempts++;
-            setTimeout(() => {
-                connectTows();
-            }, 1000);
-        };
-    
-        wsConnection.onerror = (error) => {
-            console.error('WebSocket error: ', error);
-        };
-        
         setWs(wsConnection);
         wsConnection.addEventListener('message', handleMessage);
-        
-        wsConnection.onclose = (event) => {
-            console.log('WebSocket closed. Reason: ', event.reason);
+        wsConnection.addEventListener('close', () => {
+            console.log('WebSocket closed. Attempting to reconnect...');
             reconnectAttempts++;
-            wsConnection.removeEventListener('message', handleMessage);
             setTimeout(() => {
                 connectTows();
             }, 1000);
-        };
+        });
     }
-    
     
 
     function handleMessage(ev) {
@@ -152,7 +135,8 @@ export default function Chat() {
 
     return (
         <div className="chatPage">
-            <div className="chatList">
+             
+             <div className={`chatList ${itemId ? 'hidden' : 'visible'}`}>
                 {chats.map(chat => (
                     <Link 
                         key={chat._id} 
@@ -164,7 +148,7 @@ export default function Chat() {
                     </Link>
                 ))}
             </div>
-            <div className="chatWindow">
+            <div className={`chatWindow ${itemId ? 'visible' : 'hidden'}`}>
                 <div className="chatMessages">
                     {uniqueMessages.map(message => (
                         <div key={message._id} className={`chatMessage ${message.sender === user._id ? 'sent' : 'received'}`}>
@@ -190,4 +174,4 @@ export default function Chat() {
     
     
     
-}
+} 

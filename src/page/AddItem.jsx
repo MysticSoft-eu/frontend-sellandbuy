@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import RecursiveCategorySelector from '../components/CategorySelector.jsx';
 import PhotosUploader from '../PhotosUploader';
-import "./style/AddItem.css"
+import "../styles/AddItem.css"
 import { useContext } from "react";
 import { UserContext } from "../UserContext";
 import Test from './test.jsx';
