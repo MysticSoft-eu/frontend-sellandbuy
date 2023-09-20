@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom"
 import axios from "axios"
 import AddItem from "./AddItem"
 import UserItems from "./UserItems"
-import "../styles/Account.css"
+import "../styles/account.css"
 import { FaEnvelope, FaShoppingCart, FaUserCircle } from "react-icons/fa";
 export default function AccountPage() {
   
