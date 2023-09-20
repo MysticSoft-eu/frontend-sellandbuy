@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom"
 import axios from "axios"
 import AddItem from "./AddItem"
 import UserItems from "./UserItems"
-import "./style/account.css"
+import "../styles/Account.css"
 import { FaEnvelope, FaShoppingCart, FaUserCircle } from "react-icons/fa";
 export default function AccountPage() {
   
@@ -41,14 +41,14 @@ export default function AccountPage() {
       <div>
         <nav className="nav">
           <Link to={'/account'} >MY profile</Link>
-          <Link to={'/account/bookings'} >MY booking</Link>
+          
           <Link to={'/account/listing'} >MY listing</Link>
         </nav>
 
         {subpage === 'profile' &&( 
           <div className="userInfo">
            <FaUserCircle className="userInfoICON" />
-           Logged in as ({user.name}) ({user.email}) <br/>
+           Logged in as {user.name} {user.email} <br/>
            <button className="logoutButton" onClick={logout} >Logout</button>
            </div>
         )}

@@ -141,9 +141,13 @@ export default function ItemsByCategory() {
       </div>
 
       <div className="listing-container">
-          {listings.map((listing) => (
+
+          {listings.map((listing) => (     
+             <Link to={`/itempage/${listing._id}`} key={listing._id}>
             <Listing listing={listing} key={listing._id} />
+            </Link>
           ))}
+
        </div>
     </div>
   );

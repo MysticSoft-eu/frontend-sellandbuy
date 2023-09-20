@@ -1,7 +1,9 @@
 import axios from 'axios';
 import React, { useEffect , useState } from 'react';
 import { Link } from "react-router-dom"
-import '../styles/ListingShow.css';
+
+import Listing from '../components/Listing';
+
 export default function ItemsPage() {
   const [listings, setListings] = useState([]);
   useEffect(() => { 
@@ -18,45 +20,21 @@ export default function ItemsPage() {
   }
 
   return (
-    <div>
+    
       <div>
         <Link to="/addItem">
           <button>Add item</button>
         </Link>
-      </div>
-      <div className={styles.listingContainer}>
-         
-            <div className={styles.listingItems}>
-              {listings.map((listing) => (
-                
-                <div> 
-                  <button onClick={() => deleteItem(listing._id)}>Delete</button>
-              <Link to={'/uploader/'+listing._id} >
-                <div className={styles.listingItem} key={listing.id}>
-                  <div className={styles.listingImageWrapper}>
-                    <img src={`${listing.photos[0]}`} alt="" className={styles.listingImage} />
-                  </div>
-                  <div className={styles.listingDetails}>
-                    <div className={styles.listingText}>
-                      <h3 className={styles.listingName}>{listing.title}</h3>
-                      <p className={styles.listingDescription}>
-                        {listing.description}
-                      </p>
-                    </div>
-                    <div className={styles.listingRight}>
-                      <p className={styles.listingPrice}>{listing.price}</p>
-                      <p className={styles.listingCity}>{listing.address}</p>
-                    </div>
-                  </div>
-                  
-                </div>
-                
-              </Link> 
-              
-               </div>
-                    ))}
-            </div>
-          </div>
+        <div>
+      {listings.map((listing) => (
+        <React.Fragment key={listing._id}>
+          <button onClick={() => deleteItem(listing._id)}>Delete</button>
+          <Link to={'/uploader/' + listing._id}>
+            <Listing listing={listing} />
+          </Link>
+        </React.Fragment>
+      ))}
+    </div>
     </div>
   )   
 }

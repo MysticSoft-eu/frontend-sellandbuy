@@ -5,7 +5,7 @@ function Listing({ listing }) {
 
     
     return (
-          <Link to={`/itempage/${listing._id}`} key={listing._id}>
+          
              <div className="listing-item">
               <div className="listing-image-wrapper">
                   <img src={listing.photos[0]} alt="" className="listing-image" />
@@ -25,7 +25,7 @@ function Listing({ listing }) {
                     </div>
             </div>
      </div>
-     </Link>
+     
     );
     
 }
