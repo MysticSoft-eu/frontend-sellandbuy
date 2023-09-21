@@ -78,6 +78,17 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+@media (prefers-color-scheme: light) {
+  /* Ustawienia kolorów dla jasnego trybu */
+  body {
+    background-color: rgb(233, 233, 233);
+    color: black;
+  }
+  footer.body {
+    background-color: rgb(233, 233, 233);
+      color: black; 
+   }
+}
 
 
 @media (prefers-color-scheme: dark) {
@@ -89,7 +100,7 @@ button:focus-visible {
     fill: black;
   }
 
-  }
+  
   ._categoryButton_1sypb_45  {
     background-color: rgb(35, 34, 34);
    
@@ -105,7 +116,7 @@ button:focus-visible {
     color: black; 
  }
  
-
+}
 
 /* style specyficzne dla strony */
 

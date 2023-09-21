@@ -1,9 +1,9 @@
 .chatPage {
     display: flex;
-    min-height: 600px;
+    min-height: 300px;
     border: 2px solid #ccc;
     width: 1000px;
-    height: 500px;
+    height: 600px;
     margin: 10px  auto;
 }
 
@@ -109,7 +109,8 @@
   
   
     .chatPage {
-        width: 100%;
+        width: 80%;
+         height: 400px;
     }
 
     .chatList {
@@ -117,6 +118,8 @@
     }
 
     .chatWindow {
-        width: 100%;
+        width: 80%;
+       height: 100%;
+
     }
 }

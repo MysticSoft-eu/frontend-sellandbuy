@@ -30,11 +30,19 @@
   width: 250px;
   margin: 5px;
   padding: 10px;
+  background-color: #f8f9fa;
   
-  border: #b4b4b4 solid 1px;
 }
-
-
+input {
+  background-color: #fefefe;
+}
+select {
+  background-color: #fdfdfd;
+  color: #343a40;
+}
+form {
+  color: #343a40;
+}
 
 .listingBottom {
   position: relative;
@@ -142,7 +150,7 @@
   margin: 5px;
   padding: 5px;
   
-  border: #b4b4b4 solid 1px;
+  
 }
 .listingBottom {
   position: relative;
