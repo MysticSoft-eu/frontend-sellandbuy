@@ -1,70 +1,78 @@
 
-
+/* Styling for the listing container */
 .listingContainer {
- 
-  margin: 0 auto;
-  height: max(30%, 200px);
+  margin: 0 auto; /* Center the container horizontally */
+  height: max(30%, 200px); /* Set a minimum height of 200px or 30% of the parent container, whichever is larger */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; /* Items will be displayed in a column */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
 }
 
+/* Styling for the title */
 .title {
-  text-align: center;
-  margin-bottom: 1rem;
- 
+  text-align: center; /* Center-align the text */
+  margin-bottom: 1rem; /* Add some space below the title */
 }
 
+/* Styling for the listing items container */
 .listingItems {
   display: flex;
-  flex-direction: row;      /* items will be in a row */
-  flex-wrap: wrap;          /* items will wrap to the next row if there's no space */
-  justify-content: center;
-  align-items: center;
-  
+  flex-direction: row; /* Items will be displayed in a row */
+  flex-wrap: wrap; /* Items will wrap to the next row if there's no space */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
 }
+
+/* Styling for individual listing items */
 .listingItem {
   display: flex;
-  flex-direction: column;
-  width: 250px;
-  margin: 5px;
-  padding: 10px;
-  background-color: #f8f9fa;
-  
+  flex-direction: column; /* Items will be displayed in a column */
+  width: 250px; /* Set a fixed width for each item */
+  margin: 5px; /* Add margin around each item */
+  padding: 10px; /* Add padding to each item */
+  background-color: #f8f9fa; /* Set the background color */
 }
+
+/* Styling for input fields */
 input {
   background-color: #fefefe;
 }
+
+/* Styling for select fields */
 select {
   background-color: #fdfdfd;
   color: #343a40;
 }
+
+/* Styling for the form */
 form {
   color: #343a40;
 }
 
+/* Styling for the bottom section of each listing item */
 .listingBottom {
   position: relative;
   display: flex;
-  height: 250px;
+  height: 250px; /* Set a fixed height for the bottom section */
 }
 
+/* Styling for the listing image wrapper */
 .listingImageWrapper {
   flex: 8;
-  overflow: hidden;
-  
+  overflow: hidden; /* Hide overflow content */
 }
 
+/* Styling for the listing image */
 .listingImage {
   width: 100%;
-  height: 210px;
-  object-fit: cover;
+  height: 210px; /* Set a fixed height for the image */
+  object-fit: cover; /* Ensure the image covers the container */
   padding: 0;
   border-radius: 0;
- 
 }
 
+/* Styling for the listing details section */
 .listingDetails {
   width: 100%;
   height: 100%;
@@ -72,99 +80,78 @@ form {
   flex: 2;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-end; /* Align content to the bottom */
   padding: 0;
-  
- 
-   
 }
 
+/* Styling for the listing name */
 .listingName {
-  text-align: center;
+  text-align: center; /* Center-align the text */
   display: inline-block;
-  width:auto;
+  width: auto;
   height: auto;
-  max-height: 40px;
+  max-height: 40px; /* Limit the maximum height of the name */
   padding: 2px;
   font-family: "Arial Narrow";
- font-weight: 500;
+  font-weight: 500;
   line-height: 1.1;
- 
   font-size: 16px;
   color: #343a40;
   padding: 0;
-  
-  
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
   background-color: #f8f9fa;
-  
- 
 }
 
-
-.listing{
-  display: flex;
-  flex-direction: inline-block;
-  
-  font-family: "Arial Narrow";
-}
+/* Styling for the listing price */
 .listingPrice {
   width: 50%;
-  height: 20px;
+  height: 20px; /* Set a fixed height for the price */
   background-color: #f8f9fa;
- 
   margin: 0;
-  font-size: 12px;
+  font-size: 12px; /* Adjust the font size */
   color: #424950;
-  
-  
   font-weight: bold;
 }
 
-
-
+/* Styling for the listing city */
 .listingCity {
-  align-items: left;
+  align-items: left; /* Align text to the left */
   width: 50%;
-  height: 20px;
+  height: 20px; /* Set a fixed height for the city */
   background-color: #f8f9fa;
   padding-right: 5px;
   padding-top: 2px;
-  text-align: right;
+  text-align: right; /* Align text to the right */
   margin: 0;
-  font-size: 10px;
+  font-size: 10px; /* Adjust the font size */
   color: #778593;
-
-  
- 
 }
-/* Dla ekranu o szerokości 600px lub mniej */
+
+/* Media query for smaller screens */
 @media only screen and (max-width: 600px) {
- 
-.listingItem {
-  display: flex;
-  flex-direction: column;
-  width: 150px;
-  margin: 5px;
-  padding: 5px;
-  
-  
-}
-.listingBottom {
-  position: relative;
-  display: flex;
-  height: 150px;
-}
+  /* Adjustments for smaller screens */
 
-.listingImage {
-  width: 100%;
-  height: 110px;
-  object-fit: cover;
-  padding: 0;
-  border-radius: 0;
- 
-}
+  .listingItem {
+      display: flex;
+      flex-direction: column;
+      width: 150px; /* Adjust the width for smaller screens */
+      margin: 5px;
+      padding: 5px; /* Adjust the padding for smaller screens */
+  }
 
+  .listingBottom {
+      position: relative;
+      display: flex;
+      height: 150px; /* Adjust the height for smaller screens */
+  }
+
+  .listingImage {
+      width: 100%;
+      height: 110px; /* Adjust the height for smaller screens */
+      object-fit: cover;
+      padding: 0;
+      border-radius: 0;
+  }
 }

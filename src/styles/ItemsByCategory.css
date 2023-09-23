@@ -1,156 +1,158 @@
-
-  
-  .search-container {
-    display: flex;
-    flex-wrap: wrap;
-    
-    
-    width: 80%;
-    margin: 0 auto;
-  }
-
-  .search-input {
-    width: 60%;
-    
-    flex-grow: 1;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-
-  .city-input{
-    width: 20%;
-    
-    flex-grow: 1;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .search-button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-  }
-  .some-input{
-    width: 80%;
-    display: flex;
-    flex-direction: row; 
-    justify-content: center; /* wyśrodkowanie w poziomie */
-    align-items: center;  
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .caregory-input{
-    
-    display: inline;
-  }
-
- .price-input {
-   
-    font-size: 12px;
-    
+/* Styling for the search container */
+.search-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto; /* Center the container horizontally */
 }
+
+/* Styling for the main search input */
+.search-input {
+  width: 60%;
+  flex-grow: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Styling for the city input */
+.city-input {
+  width: 20%;
+  flex-grow: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Styling for the search button */
+.search-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* Styling for some input container */
+.some-input {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Styling for the category input */
+.caregory-input {
+  display: inline;
+}
+
+/* Styling for the price input */
+.price-input {
+  font-size: 12px;
+}
+
+/* Styling for individual items within a container */
 .item {
   display: inline-block;
-  margin: 5px;  /* Optional: Adds some space between items */
+  margin: 5px; /* Optional: Adds some space between items */
 }
 
-.item input{
+/* Styling for item input fields */
+.item input {
   padding-left: 5px;
   font-size: 12px;
-  width:100px;
+  width: 100px;
   height: 20px;
   border-radius: 10px;
   border: 1px solid rgb(0, 0, 0);
 }
 
-
-.item select{
+/* Styling for item select fields */
+.item select {
   padding-left: 5px;
   font-size: 12px;
-  width:130px;
+  width: 130px;
   height: 20px;
   border-radius: 10px;
   border: 1px solid rgb(6, 6, 6);
 }
 
-.bodyc{
+/* Styling for the body container */
+.bodyc {
   min-height: 600px;
   margin-top: 20px;
 }
 
+/* Styling for the listing container */
 .listing-container {
   width: 80%;
- margin: auto;
+  margin: auto; /* Center the container horizontally */
   display: flex;
   flex-direction: column;
- 
 }
 
+/* Media query for smaller screens */
 @media only screen and (max-width: 600px) {
+  /* Adjustments for smaller screens */
+
   .search-input {
-    width: 60%;
-    min-width: 200px;
-    flex-grow: 1;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+      width: 60%;
+      min-width: 200px;
+      flex-grow: 1;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
   }
 
-  .city-input{
-    width: 20%;
-    min-width: 150px;
-    flex-grow: 1;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  .city-input {
+      width: 20%;
+      min-width: 150px;
+      flex-grow: 1;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
   }
 
-
-  .some-input{
-    width: 80%;
-    display: block;
-    
-    justify-content: center; /* wyśrodkowanie w poziomie */
-    align-items: center;  
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .caregory-input{
-    width: 100px;
-    display: block;
-
+  .some-input {
+      width: 80%;
+      display: block;
+      justify-content: center; /* Center horizontally */
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
   }
 
- .price-input {
-   
-    font-size:8px;
-    
-}
-.item {
-  display: inline-block;
-  margin: 5px;  /* Optional: Adds some space between items */
-}
+  .caregory-input {
+      width: 100px;
+      display: block;
+  }
 
-.item input{
-  padding-left: 5px;
-  font-size: 8px;
-  width:50px;
-  height: 10px;
-  border-radius: 10px;
-  border: 1px solid rgb(0, 0, 0);
-}
+  .price-input {
+      font-size: 8px;
+  }
 
+  .item {
+      display: inline-block;
+      margin: 5px; /* Optional: Adds some space between items */
+  }
 
-.item select{
-  padding-left: 5px;
-  font-size: 8px;
-  width:50px;
-  height: 12px;
-  border-radius: 10px;
-  border: 1px solid rgb(6, 6, 6);
-}
+  .item input {
+      padding-left: 5px;
+      font-size: 8px;
+      width: 50px;
+      height: 10px;
+      border-radius: 10px;
+      border: 1px solid rgb(0, 0, 0);
+  }
+
+  .item select {
+      padding-left: 5px;
+      font-size: 8px;
+      width: 50px;
+      height: 12px;
+      border-radius: 10px;
+      border: 1px solid rgb(6, 6, 6);
+  }
 }

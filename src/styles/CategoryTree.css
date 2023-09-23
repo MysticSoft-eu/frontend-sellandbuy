@@ -1,11 +1,10 @@
 /* Basic styling and setup */
 
-
-.main{
+/* Styles for the main container */
+.main {
     display: flex;
-    justify-content: center; /* wyśrodkowanie w poziomie */
-    align-items: center; 
-   
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     width: 200px;
     height: 50px;
 }
@@ -13,83 +12,64 @@
 /* Header styles */
 .dropdown-header {
     text-align: center;
-    
-    
     font-size: 15px;
     width: 130px;
     height: 25px;
-    
     background-color: #f8f9fa;
     border: 1px solid black;
-   
 }
+
 /* Styles for the dropdown list when it's open */
 .dropdown-list {
-    
-   
     padding: 10px;
     margin: 2px;
-    
-    
     position: absolute;
     width: 100%;
     z-index: 1;
-    display: none;
+    display: none; /* Initially hide the dropdown */
     border: 1px solid black;
-   
-   /* Initially hide the dropdown */
 }
 
+/* Styles for the dropdown list when it's open (with .open class) */
 .dropdown-container.open .dropdown-list {
-    display: block; /* Displayed when .open class is added to parent */
-   
+    display: block; /* Displayed when .open class is added to the parent */
     min-width: 130px;
-   
-   background-color: #f8f9fa;
- 
+    background-color: #f8f9fa;
     width: auto;
 }
 
 /* Individual category items */
 .dropdown-list li {
     list-style-type: none;
-    
-    width: 100%; 
-   
+    width: 100%;
 }
-
 
 /* Category name which is clickable for expansion */
 .dropdown-list li > div {
     display: inline-block;
-    min-width: 80px; /* Give some space for the checkbox */
+    min-width: 80px; /* Give space for the checkbox */
     padding-right: 10px;
     width: auto;
     cursor: pointer;
-   
-    
-   border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
 }
 
 /* Checkbox styling */
 .dropdown-list input[type="checkbox"] {
-   
-   
     vertical-align: middle;
     margin-right: 10px;
     position: relative;
     padding: 0;
-    width: 15px; /* Set the checkbox width */
-    height: 15px; /* Set the checkbox height */
+    width: 15px; /* Checkbox width */
+    height: 15px; /* Checkbox height */
     cursor: pointer;
     font-size: 16px;
     line-height: 20px;
     display: inline-block;
     vertical-align: middle;
-    user-select: none; 
+    user-select: none;
     border: 2px solid #666;
     background-color: #fff;
-   
     transition: border-color 0.2s, background-color 0.2s;
 }
 
@@ -98,26 +78,23 @@
     margin-top: 10px;
     font-weight: bold;
 }
+
+/* Media query for small screens */
 @media only screen and (max-width: 600px) {
-    .main{
+    .main {
         display: flex;
-        justify-content: center; /* wyśrodkowanie w poziomie */
-        align-items: center; 
-       
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
         width: 100px;
         height: 30px;
     }
     
     .dropdown-header {
         text-align: center;
-        
-        
         font-size: 10px;
         width: 80px;
         height: 15px;
-        
         background-color: #f8f9fa;
         border: 1px solid black;
-       
-        
-    }}
+    }
+}

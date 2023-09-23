@@ -1,3 +1,4 @@
+/* Styling for the main container */
 .container {
   width: 100%;
   height: 100vh;
@@ -5,70 +6,80 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f2f2f2;
+  background-color: #f2f2f2; /* Background color for the container */
 }
 
+/* Styling for titles */
 .title {
-  margin:0 0  20px 0;
+  margin: 0 0 20px 0; /* Margin for the title */
   align-items: center;
   text-align: center;
 }
 
+/* Styling for the form */
 .form {
-  width: 300px;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
+  width: 300px; /* Width of the form */
+  padding: 20px; /* Padding for the form */
+  background-color: #fff; /* Background color for the form */
+  border-radius: 5px; /* Border radius for rounded corners */
 }
 
+/* Styling for form groups (input fields) */
 .formGroup {
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Margin between form groups */
 }
 
+/* Styling for labels */
 .label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 5px; /* Margin below labels */
 }
 
+/* Styling for input fields */
 .input {
-  width: 100%;
-  padding: 8px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  width: 100%; /* Width of input fields */
+  padding: 8px; /* Padding for input fields */
+  border-radius: 5px; /* Border radius for rounded corners */
+  border: 1px solid #ccc; /* Border style and color */
 }
 
+/* Styling for buttons */
 .button {
   display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  width: 100%; /* Width of buttons */
+  padding: 10px; /* Padding for buttons */
+  background-color: #007bff; /* Background color for buttons */
+  color: #fff; /* Text color for buttons */
+  border: none; /* No border for buttons */
+  border-radius: 5px; /* Border radius for rounded corners */
+  cursor: pointer; /* Cursor style on hover */
 }
 
+/* Styling for a Google sign-in button */
 .googleButton {
   display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: #db4437;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  width: 100%; /* Width of the Google button */
+  padding: 10px; /* Padding for the Google button */
+  background-color: #db4437; /* Background color for the Google button */
+  color: #fff; /* Text color for the Google button */
+  border: none; /* No border for the Google button */
+  border-radius: 5px; /* Border radius for rounded corners */
+  cursor: pointer; /* Cursor style on hover */
 }
 
+/* Styling for links */
 .link {
-  margin-top: 10px;
-  text-align: center;
+  margin-top: 10px; /* Margin above links */
+  text-align: center; /* Text alignment for links */
 }
 
+/* Styling for link anchors */
 .link a {
-  color: #007bff;
-  text-decoration: none;
+  color: #007bff; /* Link text color */
+  text-decoration: none; /* Remove underlines from links */
 }
 
+/* Styling for link anchors on hover */
 .link a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline links on hover */
 }

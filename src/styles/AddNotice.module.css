@@ -1,25 +1,29 @@
+/* Styles for the "Add Notice" button container */
 .addNoticeButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  max-width: 400px; /* Adjust this value to fit your desired width */
-  margin: 1rem auto;
-  padding: 1rem;
-  border: none;
-  background-color: #f8f9fa;
-  color: black;
-  font-size: 1rem;
+  display: flex; /* Use flexbox to align content */
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+  width: 80%; /* Set the width to 80% of the parent container */
+  max-width: 400px; /* Adjust this value to fit your desired maximum width */
+  margin: 1rem auto; /* Add margin for spacing */
+  padding: 1rem; /* Add padding around the button */
+  border: none; /* Remove button border */
+  background-color: #f8f9fa; /* Button background color */
+  color: black; /* Text color */
+  font-size: 1rem; /* Font size */
 
-  transition: background-color 0.3s ease;
+  /* Button hover effect */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
+/* Button hover state styles */
 .addNoticeButton:hover {
-  background-color: #f8f9;
-  transform: scale(1.05);
+  background-color: #f8f9; /* Background color on hover */
+  transform: scale(1.05); /* Enlarge the button slightly on hover */
 }
 
+/* Styles for the icon within the "Add Notice" button */
 .addNoticeIcon {
-  margin-right: 0.5rem;
-  font-size: 1.2rem;
+  margin-right: 0.5rem; /* Add right margin to create spacing between icon and text */
+  font-size: 1.2rem; /* Set the font size for the icon */
 }

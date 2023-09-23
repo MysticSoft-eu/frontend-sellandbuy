@@ -6,15 +6,24 @@ import AddNotice from "../components/AddNotice";
 import LatestListings from "../components/LatestListings";
 import "../App.css";
 
-
 function Layout() {
   return (
     <div className="App">
-      
+      {/* The main structure of the application */}
       <div className="main-content">
+        {/* Navbar component for navigation */}
+        <Navbar />
+        
+        {/* Searchbar component for searching */}
         <Searchbar />
+        
+        {/* Category component for displaying categories */}
         <Category />
+        
+        {/* AddNotice component for adding new notices */}
         <AddNotice />
+        
+        {/* LatestListings component for displaying the latest listings */}
         <LatestListings />
       </div>
     </div>

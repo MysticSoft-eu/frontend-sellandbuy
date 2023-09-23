@@ -1,50 +1,56 @@
+/* Styles for the category container */
 .category {
-  
-  margin: 0 auto;
-  height: max(30%, 200px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto; /* Center the container horizontally */
+  height: max(30%, 200px); /* Set a maximum height based on a percentage or minimum value */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange children in a column layout */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
 }
 
+/* Styles for the category title */
 .title {
-  text-align: center;
-  margin-bottom: 1rem;
+  text-align: center; /* Center-align the text */
+  margin-bottom: 1rem; /* Add space below the title */
 }
 
+/* Styles for the container of category buttons */
 .buttonsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow buttons to wrap to the next line if necessary */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
 }
 
+/* Styles for individual category buttons */
 .categoryButton {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0.5rem;
-  padding: 1rem;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange children in a column layout */
+  align-items: center; /* Center content horizontally */
+  margin: 0.5rem; /* Add margin around each button */
+  padding: 1rem; /* Add padding inside each button */
   width: 100px; /* Set a fixed width for all buttons */
   height: 80px; /* Set a fixed height for all buttons */
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  background-color: #f8f9fa;
+  border: none; /* Remove button border */
+  background-color: transparent; /* Transparent background */
+  cursor: pointer; /* Change cursor on hover */
+  transition: all 0.3s ease; /* Smooth transition for button interactions */
+  background-color: #f8f9fa; /* Button background color */
 }
 
+/* Styles for the hover state of category buttons */
 .categoryButton:hover {
-  transform: scale(1.05);
-  background-color: #f8f9;
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+  background-color: #f8f9; /* Change background color on hover */
 }
 
+/* Styles for the category icon */
 .categoryIcon {
-  font-size: 2rem;
+  font-size: 2rem; /* Set the font size for the icon */
 }
 
+/* Styles for the category name text */
 .categoryName {
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
+  font-size: 0.9rem; /* Set the font size for the category name */
+  margin-top: 0.5rem; /* Add space above the category name */
 }

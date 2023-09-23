@@ -1,52 +1,46 @@
 /* Container for the whole page */
-.items{
-    min-height: 600px;
+.items {
+    min-height: 600px; /* Minimum height for the container */
 }
+
+/* Container for individual items */
 .itemContainer {
-    
-    width: 80%;
+    width: 80%; /* Set the width of the container */
     height: 100%;
-    margin: 30px auto ;
+    margin: 30px auto; /* Center the container horizontally and add top margin */
     background-color: #f4f4f4;
     border-radius: 8px;
-   
-    
-   
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
-.itemInfo{
+
+/* Container for item information */
+.itemInfo {
     display: flex;
     justify-content: space-between;
     width: auto;
     height: 100%;
-    margin: 5px ;
+    margin: 5px;
     background-color: #f4f4f4;
     border-radius: 8px;
 }
 
-.itemBotton{
-   
-  
-    margin-bottom: 10px ;
-    
-}
-
-
-/* Styling the title */
+/* Styling for the title of the item */
 .itemTitle {
     font-size: 28px;
     margin: 5px;
     color: #333;
 }
 
-/* Styling the description */
+/* Styling for the description of the item */
 .itemDescription {
     font-size: 16px;
     margin-bottom: 10px;
     line-height: 1.5;
     color: #343a40;
 }
-.itemButton{
+
+/* Styling for buttons within the item */
+.itemButton {
     padding: 10px 15px;
     border: none;
     background-color: #4f4f50;
@@ -56,9 +50,11 @@
     transition: background-color 0.3s;
 }
 
-.itemButton:hover{
+.itemButton:hover {
     background-color: #b6b6b6;
 }
+
+/* Styling for item price */
 .price {
     align-items: center;
     text-align: center;
@@ -68,6 +64,8 @@
     line-height: 1;
     color: #343a40;
 }
+
+/* Styling for item address */
 .address {
     font-style: italic;
     align-items: center;
@@ -77,25 +75,52 @@
     line-height: 1.5;
     color: #343a40;
 }
-/* Category styling */
 
+/* Styling for the category section */
+.category {
+    font-size: 13px;
+    display: inline-table;
+    margin: 0px;
+}
 
+/* Styling for the category list */
+.category-list {
+    margin: 0 0  0 10px;
+    padding: 0;
+}
+
+/* Styling for individual categories */
+.category-list li {
+    display: inline;
+    margin-right: 10px;
+}
+
+/* Styling for category links */
+.category-list li a {
+    font-size: 13px;
+    color: #333;
+}
+
+/* Remove right margin from the last category link */
+.category-list li:last-child {
+    margin-right: 0;
+}
+
+/* Styling for photo container and thumbnails */
 .photoContainer {
-    
     display: flex;
     align-items: center;
     justify-content: center;
-    
-
 }
 
+/* Styling for the main item photo */
 .mainPhoto {
     height: 400px;
     position: relative;
     padding: 0px;
-   
 }
 
+/* Styling for thumbnail photos */
 .thumbnailPhotos {
     display: flex;
     flex-direction: column;
@@ -103,95 +128,67 @@
     justify-content: center;
 }
 
+/* Styling for individual thumbnail photos */
 .thumbnailPhoto {
     width: 100px;
     height: 100px;
     margin: 5px 0;
     padding: 10px;
     cursor: pointer;
-    
 }
 
+/* Styling for active thumbnail photo */
 .thumbnailPhoto.active {
     border: 2px solid #aaaaaa;
     background-color: #ffffff;
 }
 
-
+/* Styling for the photo itself */
 .photo {
-    
-  max-height: 400px;
+    max-height: 400px;
     border-radius: 0px;
-   padding: 10px;
-     /* Optional, if you want the photo to be responsive */
+    padding: 10px;
 }
 
+/* Styling for navigation buttons within photos */
 .navButton {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%); /* This will vertically center the button. */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black. Adjust as needed. */
-    color: #FFF; /* White color for the arrow */
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFF;
     border: none;
     cursor: pointer;
 }
 
+/* Styling for the previous navigation button */
 .navButton.prev {
-    left: 10px; /* Place the previous button 10px from the left */
+    left: 10px;
 }
 
+/* Styling for the next navigation button */
 .navButton.next {
-    right: 10px; /* Place the next button 10px from the right */
+    right: 10px;
 }
-.itemInfoContainer{
-    align-items: center;
-    text-align: center;
-}
-.category {
-  
-    font-size: 13px;
-   
-    display: inline-table;
-    margin: 0px;
-  }
-  
-  .category-list {
-    margin: 0 0  0 10px;
-    padding: 0;
 
-  }
-  
-  .category-list li {
- 
-    display: inline;
-    margin-right: 10px;
-  }
-  .category-list li a {
-    font-size: 13px;
-    color: #333;
-    
-  }
-  .category-list li:last-child {
-    margin-right: 0;
-  }
-  
+/* Media query for smaller screens */
 @media only screen and (max-width: 600px) {
     .photoContainer {
-    
         display: inline;
         align-items: center;
         justify-content: center;
-    
     }
+    
     .thumbnailPhotos {
         display: flex;
         flex-direction: row;
         margin-left: 0px;
         justify-content: center;
     }
-    .mainPhoto {height: 250px;
+    
+    .mainPhoto {
+        height: 250px;
         position: relative;
         padding: 0px;
-       
     }
 }

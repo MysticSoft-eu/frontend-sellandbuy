@@ -9,7 +9,10 @@ import { FaSearch } from "react-icons/fa";
 import Listing from '../components/Listing';
 
 export default function ItemsByCategory() {
+  // Get category, searchQuery, and cityQuery from URL parameters
   const { category, searchQuery = "", cityQuery = "" } = useParams();
+
+  // State to store listings, input values, selected categories, price range, and sort option
   const [listings, setListings] = useState([]);
   const [inputValue, setInputValue] = useState(searchQuery); 
   const [city, setCity] = useState(cityQuery); 
@@ -19,15 +22,15 @@ export default function ItemsByCategory() {
   const [sortOption, setSortOption] = useState('');
   const navigate = useNavigate();
 
+  // Fetch items based on selected criteria when selected categories change
   useEffect(() => {
     if (selected && selected.length > 0){
       navigate(`/category/${selected.map(cat => cat.name).join(',')}${inputValue ? `/${inputValue}` : `/all`}${city ? `/${city}` : ''}`)
     }
     fetchItems();
-
-    console.log(selected);
   }, [selected]);
 
+  // Function to fetch items based on selected criteria
   const fetchItems = async () => {
     let baseUrl = `/items`;
     let params = [];
@@ -67,25 +70,22 @@ export default function ItemsByCategory() {
     }
   };
 
+  // Set input values and fetch items when category, search query, or city query change
   useEffect(() => {
     setInputValue(searchQuery);
     setCity(cityQuery);
     fetchItems();
   }, [category, searchQuery, cityQuery]);
 
-  const handleInput = () => {
-    fetchItems();
-  };
-
+  // Fetch items when price range or sorting option change
   useEffect(() => {
     fetchItems();
-  }, [ minPrice, maxPrice, sortOption]);
+  }, [minPrice, maxPrice, sortOption]);
 
   return (
     <div className='bodyc'>
       <div className="search-container">
-       
-
+        {/* Input field for search query */}
         <input 
             type="text" 
             value={inputValue}
@@ -93,12 +93,14 @@ export default function ItemsByCategory() {
             placeholder="Search..."
             className="search-input"
         />
+        {/* Button to trigger search */}
         <Link to={`/category/${category}${inputValue ? `/${inputValue}` : `/all`}${city ? `/${city}` : ''}`}>
           <button onClick={handleInput} className="search-button">
             <FaSearch />
           </button>
         </Link>
         
+        {/* Input field for city query */}
         <>
         <input 
             type="text" 
@@ -107,6 +109,7 @@ export default function ItemsByCategory() {
             placeholder="City..."
             className="city-input"
         />
+        {/* Button to trigger city search */}
         <Link to={`/category/${category}${inputValue ? `/${inputValue}` : `/all`}${city ? `/${city}` : ''}`}>
           <button onClick={handleInput} className="search-button">
             <FaSearch />
@@ -115,6 +118,7 @@ export default function ItemsByCategory() {
         </>
       </div>
       <div className="some-input">
+        {/* Category dropdown for selecting categories */}
         <CategoryDropdown className="category-input" setSelectedCategories={setSelected} selectedCategories={selected} />
         <div className="price-input">
           <div class="item">
@@ -133,6 +137,7 @@ export default function ItemsByCategory() {
             /></div>
             <div class="item">
             <label>Sort By:</label>
+            {/* Dropdown for sorting options */}
             <select value={sortOption} onChange={(e) => setSortOption(e.target.value)}>
                 <option value="asc">Price: Low to High</option>
                 <option value="desc">Price: High to Low</option>
@@ -141,13 +146,12 @@ export default function ItemsByCategory() {
       </div>
 
       <div className="listing-container">
-
-          {listings.map((listing) => (     
+        {/* Display listings */}
+        {listings.map((listing) => (     
              <Link to={`/itempage/${listing._id}`} key={listing._id}>
-            <Listing listing={listing} key={listing._id} />
-            </Link>
+              <Listing listing={listing} key={listing._id} />
+             </Link>
           ))}
-
        </div>
     </div>
   );

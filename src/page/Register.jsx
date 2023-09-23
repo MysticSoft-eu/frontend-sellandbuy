@@ -45,6 +45,7 @@ export default function RegisterPage() {
               className={styles.input}
               value={name}
               onChange={(e) => setName(e.target.value)}
+              maxLength={20}
             />
           </div>
           <div className={styles.formGroup}>
@@ -57,6 +58,7 @@ export default function RegisterPage() {
               className={styles.input}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              maxLength={20}
             />
           </div>
           <div className={styles.formGroup}>
@@ -69,6 +71,7 @@ export default function RegisterPage() {
               className={styles.input}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              maxLength={20}
             />
           </div>
           <div className={styles.formGroup}>
@@ -81,6 +84,7 @@ export default function RegisterPage() {
               className={styles.input}
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
+              maxLength={20}
             />
           </div>
           <button type="submit" className={styles.button}>

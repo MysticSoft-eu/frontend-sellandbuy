@@ -1,21 +1,24 @@
+/* Styling for the search container */
 .search-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-  margin: 0 auto;
+  justify-content: space-between; /* Horizontally distribute items */
+  align-items: center; /* Vertically center items */
+  width: 80%; /* Set the width of the container */
+  margin: 0 auto; /* Center the container horizontally */
 }
 
+/* Styling for the search input field */
 .search-input {
-  flex-grow: 1;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  flex-grow: 1; /* Allow the input field to grow and fill available space */
+  padding: 0.5rem; /* Padding for the input field */
+  border: 1px solid #ccc; /* Border style and color */
+  border-radius: 5px; /* Border radius for rounded corners */
 }
 
+/* Styling for the search button */
 .search-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
+  background-color: transparent; /* Transparent background for the button */
+  border: none; /* Remove the button border */
+  cursor: pointer; /* Set cursor to pointer on hover */
+  padding: 0.5rem; /* Padding for the button */
 }

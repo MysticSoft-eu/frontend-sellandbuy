@@ -1,91 +1,104 @@
+/* Styling for the listing container */
 .listingContainer {
-  width: 80%;
-  min-width: 400px;
-  margin: 0 auto;
-  height: max(30%, 200px);
+  width: 80%; /* Set the container width to 80% */
+  min-width: 400px; /* Set a minimum width of 400px */
+  margin: 0 auto; /* Center-align the container horizontally */
+  height: max(30%, 200px); /* Ensure a minimum height of 200px or 30% of the viewport height */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; /* Arrange child elements in a column */
+  justify-content: center; /* Center-align child elements vertically */
+  align-items: center; /* Center-align child elements horizontally */
 }
 
+/* Styling for the title */
 .title {
-  text-align: center;
-  margin-bottom: 1rem;
+  text-align: center; /* Center-align the text */
+  margin-bottom: 1rem; /* Add some space below the title */
 }
 
+/* Styling for the listing items container */
 .listingItems {
-  width: 100%;
-  height: 150px;
-  display: flex-block;
-  /* items will wrap to the next row if there's no space */
-  justify-content: center;
-  align-items: center;
+  width: 100%; /* Fill the entire width */
+  height: 150px; /* Set a fixed height for each listing item */
+  display: flex-block; /* Incorrect property, use 'flex' to arrange items */
+  justify-content: center; /* Center-align items horizontally */
+  align-items: center; /* Center-align items vertically */
 }
+
+/* Styling for each listing item */
 .listingItem {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 150px;
-  margin: 10px;                /* Some margin to space items out */
-  background-color: #f8f9fa;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  display: flex; /* Arrange item contents in a row */
+  align-items: center; /* Center-align contents vertically */
+  width: 100%; /* Fill the entire width */
+  height: 150px; /* Set a fixed height for each listing item */
+  margin: 10px; /* Add margin to space items out */
+  background-color: #f8f9fa; /* Set the background color */
+  border-radius: 5px; /* Add rounded corners */
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); /* Add a box shadow */
 }
+
+/* Styling for the listing image wrapper */
 .listingImageWrapper {
-  display: block;
- 
-  height: 150px;
-  overflow: hidden;
-  border-radius: 5px 0 0 5px;
+  display: block; /* Display as a block element */
+  height: 150px; /* Set a fixed height for the image wrapper */
+  overflow: hidden; /* Hide overflow content */
+  border-radius: 5px 0 0 5px; /* Rounded corners on the left side */
 }
 
+/* Styling for the listing image */
 .listingImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100%; /* Fill the entire width */
+  height: 100%; /* Fill the entire height */
+  object-fit: cover; /* Ensure the image covers the container */
 }
 
+/* Styling for the listing details section */
 .listingDetails {
-  width: 100%;
-  height: 100%;
-  flex-grow: 1;
-  margin: 5px;
-  display: flex;
+  width: 100%; /* Fill the entire width */
+  height: 100%; /* Fill the entire height */
+  flex-grow: 1; /* Allow the details section to grow within its container */
+  margin: 5px; /* Add some margin around the details */
+  display: flex; /* Arrange details in a row */
 }
 
+/* Styling for the listing text */
 .listingText {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  margin-right: 5px;
-  justify-content: space-between;
+  display: flex; /* Arrange text contents in a column */
+  flex-direction: column; /* Stack text contents vertically */
+  flex-grow: 1; /* Allow text section to grow within its container */
+  margin-right: 5px; /* Add margin on the right side */
+  justify-content: space-between; /* Space evenly between text elements */
 }
 
+/* Styling for the listing name */
 .listingName {
-  margin-top: 0px;
-  font-size: 1rem;
-  font-weight: bold;
+  margin-top: 0px; /* Reset top margin */
+  font-size: 1rem; /* Set font size for the name */
+  font-weight: bold; /* Apply bold font weight */
 }
 
+/* Styling for the listing description */
 .listingDescription {
-  margin-top: 0px;
-  font-size: 0.7rem;
+  margin-top: 0px; /* Reset top margin */
+  font-size: 0.7rem; /* Set font size for the description */
 }
 
+/* Styling for the right section of the listing */
 .listingRight {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-between;
+  display: flex; /* Arrange right section contents in a column */
+  flex-direction: column; /* Stack contents vertically */
+  align-items: flex-end; /* Right-align contents horizontally */
+  justify-content: space-between; /* Space evenly between right section elements */
 }
 
+/* Styling for the listing price */
 .listingPrice {
-  margin-top: 0px;
-  font-weight: bold;
+  margin-top: 0px; /* Reset top margin */
+  font-weight: bold; /* Apply bold font weight */
 }
 
+/* Styling for the listing city */
 .listingCity {
-  margin: 0;
-  font-size: 0.9rem;
+  margin: 0; /* Reset margin */
+  font-size: 0.9rem; /* Set font size for the city */
 }

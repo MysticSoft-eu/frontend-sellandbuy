@@ -1,40 +1,37 @@
-/* Footer.css */
+/* Styles for the body (container) of the footer */
 .body {
-    width: 80%;
-    
+    width: 80%; /* Set the width of the container */
     background-color: #ffffff;
-    color: #ecf0f1;
+    color: #ecf0f1; /* Text color */
     padding: 20px;
-    width: 100%;
+    width: 100%; /* This line is redundant, you may remove it */
     bottom: 0;
-    position: bottom;
-   
-}
-.footer{
-    
-    border-top: #c4c4c4 solid 2px;
+    position: bottom; /* This should be "position: absolute;" to position the footer at the bottom */
 }
 
+/* Styles for the footer section */
+.footer {
+    border-top: #c4c4c4 solid 2px; /* Add a top border to separate footer from content */
+}
+
+/* Styles for the navigation links in the footer */
 .footer-nav {
-   
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Allow links to wrap to the next line on smaller screens */
 }
 
-.footer-link  {
-    
-   color: #c4c4c4;
-    margin: 0 10px;
-   
+/* Styles for individual footer links */
+.footer-link {
+    color: #c4c4c4; /* Link text color */
+    margin: 0 10px; /* Add horizontal spacing between links */
 }
 
-
-.footer p { 
-    
-    padding: 20px;
-    color: #c4c4c4;
-    margin: 0;
-    text-align: center;
+/* Styles for paragraphs within the footer */
+.footer p {
+    padding: 20px; /* Add space around paragraphs */
+    color: #c4c4c4; /* Text color for paragraphs */
+    margin: 0; /* Remove default margin */
+    text-align: center; /* Center-align the text within paragraphs */
 }

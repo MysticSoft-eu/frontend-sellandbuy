@@ -1,57 +1,64 @@
+/* Styling for the navigation bar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 40px; /* Adjust this value to set the height */
+  height: 40px; /* You can adjust this value to set the height of the navigation bar */
   width: 100%;
   z-index: 10;
   position: sticky;
   top: 0;
-
   padding: 1rem;
   background-color: #f8f9fa;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); /* Adding a box shadow for the navbar */
 }
 
-
+/* Styling for the title within the navigation bar */
 .title {
   font-size: 1.5rem;
   font-weight: bold;
   color: #343a40;
 }
 
+/* Styling for icons within the navigation bar */
 .icons {
   display: flex;
   gap: 1rem;
 }
 
+/* Styling for individual icons */
 .icon {
   font-size: 1.2rem;
   color: #343a40;
   cursor: pointer;
 }
 
+/* Media query for screens with a minimum width of 768px (tablet/desktop) */
 @media (min-width: 768px) {
-}
-.iconLink:hover .icon {
-  color: #343a;
+  /* You can add specific styling for larger screens here if needed */
 }
 
-.iconLink  {
-text-align: center;
+/* Styling for links containing icons */
+.iconLink {
+  text-align: center;
   display: flex;
   flex-direction: inline-block;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  
   font-size: 1rem;
   font-weight: 500;
   gap: 0.2rem;
-  
- }
+}
 
- .text {
+/* Styling for the text within icon links */
+.text {
   font-size: 1rem;
   font-weight: 500;
-  color: #343a40;}
+  color: #343a40;
+}
+
+/* Styling for icon links on hover */
+.iconLink:hover .icon {
+  color: #343a; /* You may want to specify a color here; currently, it's not a valid color code */
+}

@@ -1,12 +1,14 @@
+/* Styles for the chat page container */
 .chatPage {
     display: flex;
     min-height: 300px;
     border: 2px solid #ccc;
     width: 1000px;
     height: 600px;
-    margin: 10px  auto;
+    margin: 10px auto;
 }
 
+/* Styles for the chat list container */
 .chatList {
     width: 30%;
     border-right: 1px solid #ccc;
@@ -15,6 +17,7 @@
     background-color: #f8f9fa;
 }
 
+/* Styles for individual chat list items */
 .chatListItem {
     display: block;
     padding: 10px;
@@ -27,6 +30,7 @@
     background: #eee;
 }
 
+/* Styles for the chat window container */
 .chatWindow {
     width: 70%;
     padding: 10px;
@@ -36,29 +40,34 @@
     justify-content: space-between;
 }
 
+/* Styles for chat messages container */
 .chatMessages {
     flex-grow: 1;
     overflow-y: auto;
-    padding-bottom: 10px; /* Added to separate the last message from the input container */
+    padding-bottom: 10px;
 }
 
+/* Styles for individual chat messages */
 .chatMessage {
     padding: 10px;
     margin-bottom: 5px;
     border-radius: 5px;
-    width: fit-content; /* Added to adjust the width according to the message length */
+    width: fit-content; /* Adjust the width based on message length */
 }
 
+/* Styles for sent chat messages */
 .chatMessage.sent {
     background: #e0f7fa;
     align-self: flex-end;
 }
 
+/* Styles for received chat messages */
 .chatMessage.received {
     background: #fff9c4;
     align-self: flex-start;
 }
 
+/* Styles for the chat input container */
 .chatInputContainer {
     display: flex;
     align-items: center;
@@ -67,11 +76,13 @@
     border-top: 1px solid #ccc;
 }
 
+/* Styles for the message sender's name */
 .messageSender {
     font-weight: bold;
     margin-right: 10px;
 }
 
+/* Styles for the chat input field */
 .chatInputContainer input {
     width: 100%;
     padding: 10px;
@@ -80,6 +91,7 @@
     margin-right: 10px;
 }
 
+/* Styles for the send message button */
 .chatInputContainer button {
     padding: 10px 20px;
     background: #00796b;
@@ -92,34 +104,33 @@
 .chatInputContainer button:hover {
     background: #004d40;
 }
-/* Style for the chatList when selectChat is not active (hidden) */
 
-
+/* Media query for smaller screens */
 @media (max-width: 800px) {
+    /* Hide the chat list when not active */
     .chatList.hidden {
-    display: none;
-  }
-  
-
-  
-  /* Style for the chatWindow when selectChat is not active (hidden) */
-  .chatWindow.hidden {
-    display: none;
-  }
-  
-  
-    .chatPage {
-        width: 80%;
-         height: 400px;
+        display: none;
     }
 
+    /* Hide the chat window when not active */
+    .chatWindow.hidden {
+        display: none;
+    }
+
+    /* Adjust chat page width and height for smaller screens */
+    .chatPage {
+        width: 80%;
+        height: 400px;
+    }
+
+    /* Make the chat list full width on smaller screens */
     .chatList {
         width: 100%;
     }
 
+    /* Adjust chat window width and height for smaller screens */
     .chatWindow {
         width: 80%;
-       height: 100%;
-
+        height: 100%;
     }
 }

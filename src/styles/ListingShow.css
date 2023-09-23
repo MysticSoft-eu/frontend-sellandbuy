@@ -1,39 +1,42 @@
 
 
 
-
+/* Styling for the title */
 .title {
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #343a40;
+  text-align: center; /* Center-align the text */
+  margin-bottom: 1rem; /* Add some space below the title */
+  color: #343a40; /* Set the text color */
 }
 
-
+/* Styling for the listing items */
 .listing-item {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 150px;
-    margin: 10px;                /* Some margin to space items out */
-    background-color: #f8f9fa;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-}
-.listing-image-wrapper {
-  width:400px;
-  height: 100%;
-  overflow: hidden;
- 
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 150px; /* Set a fixed height for each listing item */
+  margin: 10px; /* Add margin to space items out */
+  background-color: #f8f9fa; /* Set the background color */
+  border-radius: 5px; /* Add rounded corners */
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); /* Add a box shadow */
 }
 
+/* Styling for the listing image wrapper */
+.listing-image-wrapper {
+  width: 400px; /* Set a fixed width for the image wrapper */
+  height: 100%; /* Fill the entire height */
+  overflow: hidden; /* Hide overflow content */
+}
+
+/* Styling for the listing image */
 .listing-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Ensure the image covers the container */
   padding: 0;
   border-radius: 0;
 }
 
+/* Styling for the listing details section */
 .listing-details {
   width: 100%;
   height: 100%;
@@ -44,15 +47,16 @@
   color: #343a40;
 }
 
+/* Styling for the listing text */
 .listing-text {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   margin-right: 5px;
-  
   color: #343a40;
 }
 
+/* Styling for the listing name */
 .listing-name {
   margin-top: 0px;
   font-size: 1rem;
@@ -60,87 +64,90 @@
   color: #343a40;
 }
 
+/* Styling for the listing description */
 .listing-description {
   margin-top: 0px;
   font-size: 0.7rem;
   color: #343a40;
   overflow: hidden;
-  
-  overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
 }
 
-.listing-right{
+/* Styling for the right section of the listing */
+.listing-right {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
 }
 
+/* Styling for the listing price */
 .listing-price {
   margin-top: 0px;
   font-weight: bold;
 }
 
-.listing-city{
+/* Styling for the listing city */
+.listing-city {
   margin: 0;
   font-size: 0.9rem;
 }
+
+/* Media query for smaller screens */
 @media only screen and (max-width: 600px) {
+  /* Adjustments for smaller screens */
 
-  
-.listing-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: auto;
-  height: 100%;
-  max-height: 250px;
-               /* Some margin to space items out */
-  background-color: #f8f9fa;
-  border-radius: 5px;
- 
-}
-.listing-image-wrapper {
-  width: 100%;
-height: 100%;
-min-height: 100px;
-overflow: hidden;
+  .listing-item {
+    display: flex;
+    flex-direction: column; /* Items will be displayed in a column */
+    align-items: center;
+    width: auto;
+    height: 100%; /* Fill the entire height */
+    max-height: 250px; /* Limit the maximum height */
+    background-color: #f8f9fa; /* Set the background color */
+    border-radius: 5px; /* Add rounded corners */
+  }
 
-}
+  .listing-image-wrapper {
+    width: 100%;
+    height: 100%;
+    min-height: 100px; /* Set a minimum height */
+    overflow: hidden; /* Hide overflow content */
+  }
 
-.listing-image {
-width: 100%;
-height: 100%;
-object-fit: cover;
-padding: 0;
-border-radius: 0;
-}
-.listing-details {
-  width: 100%;
-  height: 100%;
-  max-height: 150px;
-  flex-grow: 1;
-  margin: 5px;
-  display: flex;
-  justify-content: space-between;
-  color: #343a40;
-  
-}
-.listing-description {
-  max-height: 40px;
-  margin-top: 0px;
-  font-size: 0.7rem;
-  color: #343a40;
-  overflow: hidden;
-  margin: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.listing-name {
-  margin: 0px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #343a40;
-}
+  .listing-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .listing-details {
+    width: 100%;
+    height: 100%;
+    max-height: 150px; /* Limit the maximum height */
+    flex-grow: 1;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    color: #343a40;
+  }
+
+  .listing-description {
+    max-height: 40px; /* Limit the maximum height of the description */
+    margin-top: 0px;
+    font-size: 0.7rem;
+    color: #343a40;
+    overflow: hidden;
+    margin: 0;
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  }
+
+  .listing-name {
+    margin: 0px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #343a40;
+  }
 }
