@@ -11,8 +11,6 @@ function Layout() {
     <div className="App">
       {/* The main structure of the application */}
       <div className="main-content">
-        {/* Navbar component for navigation */}
-        <Navbar />
         
         {/* Searchbar component for searching */}
         <Searchbar />
