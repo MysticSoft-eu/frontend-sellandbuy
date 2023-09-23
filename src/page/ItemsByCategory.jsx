@@ -76,7 +76,10 @@ export default function ItemsByCategory() {
     setCity(cityQuery);
     fetchItems();
   }, [category, searchQuery, cityQuery]);
-
+  
+  const handleInput = () => {
+    fetchItems();
+  };
   // Fetch items when price range or sorting option change
   useEffect(() => {
     fetchItems();
